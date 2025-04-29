@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
-
   <script type="module" crossorigin src="/goit-js-hw-10/2-snackbar.js"></script>
   <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/styles-DXXRHkak.js">
   <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-BbbuE1sJ.js">
@@ -19,25 +14,28 @@
   <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CZjNVMTf.css">
 </head>
 
-
 <body>
     <form class="form">
-        <label>
-            Delay (ms)
-            <input type="number" name="delay" required />
-        </label>
+        <label for="delay">Delay (ms)</label>
+        <input type="number" id="delay" name="delay" required />
+
         <fieldset>
             <legend>State</legend>
-            <label>
-                <input type="radio" name="state" value="fulfilled" required />
+
+            <label for="fulfilled">
+                <input type="radio" id="fulfilled" name="state" value="fulfilled" required />
                 Fulfilled
             </label>
-            <label>
-                <input type="radio" name="state" value="rejected" required />
+
+            <label for="rejected">
+                <input type="radio" id="rejected" name="state" value="rejected" required />
                 Rejected
             </label>
         </fieldset>
+
         <button type="submit">Create notification</button>
     </form>
 
 </body>
+
+</html>
