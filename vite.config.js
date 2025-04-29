@@ -1,8 +1,17 @@
 import { defineConfig } from 'vite';
-import { glob } from 'glob';
+import path from 'path';
+import { globSync } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+
+// Створимо об'єкт типу { index: '/src/index.html', form: '/src/2-form.html', ... }
+const inputHtmlFiles = Object.fromEntries(
+  globSync('./src/*.html').map(file => {
+    const name = path.basename(file, '.html');
+    return [name, path.resolve(__dirname, file)];
+  })
+);
 
 export default defineConfig(({ command }) => {
   return {
@@ -13,7 +22,7 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
       rollupOptions: {
-        input: glob.sync('./src/*.html'),
+        input: inputHtmlFiles,
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {

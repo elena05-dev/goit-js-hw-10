@@ -16,3 +16,203 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+/*--dz1--*/
+body {
+  font-family: "Montserrat",
+    sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-btn {
+  padding-left: 156px;
+  padding-top: 36px;
+}
+
+#datetime-picker {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+button[data-start] {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 8px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+}
+
+button[data-start]:enabled {
+  background: #4e75ff;
+  cursor: pointer;
+  opacity: 1;
+  color: #fff;
+}
+
+.timer {
+  display: flex;
+  padding-left: 156px;
+  gap: 32px;
+  font-size: 24px;
+}
+
+.field-days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55px;
+  height: 72px;
+}
+
+.field-hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 61px;
+  height: 72px;
+}
+
+.field-min {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 76px;
+  height: 72px;
+}
+
+.field-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 82px;
+  height: 72px;
+}
+
+.value {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+  text-transform: uppercase;
+}
+
+/*--dz2--*/
+.form {
+  width: 1440px;
+  padding-left: 156px;
+  padding-top: 68px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input[type="number"] {
+  width: 360px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  transition: border-color 250ms, box-shadow 250ms;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: #4e75ff;
+  box-shadow: 0 0 5px rgba(78, 117, 255, 0.5);
+}
+
+fieldset {
+  width: 360px;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  stroke-width: 1px;
+  border: 1px solid #808080;
+}
+
+legend {
+  margin-left: 28px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.form fieldset label {
+  display: flex;
+  flex-direction: row;
+  margin-left: 48px;
+  margin-bottom: 8px;
+}
+
+.form fieldset input[type="radio"] {
+  border: 1px solid #757575;
+  border-radius: 14px;
+  width: 20px;
+  height: 20px;
+}
+
+button[type="submit"] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[type="submit"]:hover {
+  background: #6c8cff;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
